@@ -1,0 +1,6 @@
+[tasks.flash]
+script = [
+'''
+cargo flash --chip nrf52840_xxAA --target thumbv7em-none-eabihf
+'''
+]

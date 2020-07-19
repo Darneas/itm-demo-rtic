@@ -1,0 +1,20 @@
+[package]
+name = "probers"
+version = "0.1.0"
+authors = ["Andreas Schmidt <andreas.schmidt@iese.fraunhofer.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m-rtic = "0.5.3" 
+panic-itm = "0.4.1"
+embedded-hal = "0.2.3"
+cortex-m = "0.6.2"
+nrf52840-hal = "0.11.0"
+panic-halt = "0.2.0"
+cortex-m-semihosting = "0.3.3"
+
+[dependencies.panic-semihosting]
+features = ["exit"]
+version = "0.5.2"
