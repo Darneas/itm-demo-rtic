@@ -26,7 +26,7 @@ const APP: () = {
         let itm = cx.resources.itm;
         loop {
             iprintln!(&mut itm.stim[0], "idle");
-            asm::wfi();
+            cortex_m::asm::delay(1000000);
         }
     }
 };
