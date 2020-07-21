@@ -4,11 +4,11 @@
 #![allow(non_snake_case)]
 
 pub use cortex_m::{asm, iprintln};
-use hal::stm32 as target;
+use hal::pac as target;
 use panic_semihosting as _;
-use stm32f3_discovery::stm32f3xx_hal as hal;
+use stm32f3xx_hal as hal;
 
-#[rtic::app(device = stm32f3_discovery::stm32f3xx_hal::stm32, peripherals = true)]
+#[rtic::app(device = stm32f3xx_hal::pac, peripherals = true)]
 const APP: () = {
     struct Resources {
         itm: target::ITM,
