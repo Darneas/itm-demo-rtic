@@ -3,7 +3,6 @@
 #![no_std]
 
 pub use cortex_m::{asm, iprintln};
-use nrf52840_hal;
 use nrf52840_hal::pac as target;
 use panic_semihosting as _;
 
