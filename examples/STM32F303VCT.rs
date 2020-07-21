@@ -3,11 +3,11 @@
 #![no_std]
 
 pub use cortex_m::{asm, iprintln};
-use nrf52840_hal;
-use nrf52840_hal::pac as target;
+use stm32f3_discovery::stm32f3xx_hal as hal;
+use hal::stm32 as target;
 use panic_semihosting as _;
 
-#[rtic::app(device = nrf52840_hal::pac, peripherals = true)]
+#[rtic::app(device = stm32f3_discovery::stm32f3xx_hal::stm32, peripherals = true)]
 const APP: () = {
     struct Resources {
         itm: target::ITM,
