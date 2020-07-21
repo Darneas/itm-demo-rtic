@@ -1,11 +1,12 @@
 #![deny(unsafe_code)]
 #![no_main]
 #![no_std]
+#![allow(non_snake_case)]
 
 pub use cortex_m::{asm, iprintln};
-use stm32f3_discovery::stm32f3xx_hal as hal;
 use hal::stm32 as target;
 use panic_semihosting as _;
+use stm32f3_discovery::stm32f3xx_hal as hal;
 
 #[rtic::app(device = stm32f3_discovery::stm32f3xx_hal::stm32, peripherals = true)]
 const APP: () = {
