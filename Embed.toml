@@ -1,14 +1,14 @@
-#[default.probe]
-#protocol = "Swd"
+[default.probe]
+protocol = "Swd"
 #speed = 28000
 
 [default.flashing]
 enabled = true
 
 [default.general]
-chip = "nrf52840_xxAA"
+chip = "STM32F103C8"
 
-#[default.rtt]
-#enabled = true
-#show_timestamps = true
-#timeout = 3000
+[default.rtt]
+enabled = true
+show_timestamps = true
+timeout = 3000

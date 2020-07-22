@@ -8,3 +8,4 @@
 
 ## STM32F103C8
 `cargo flash --chip STM32F103C8 --example STM32F103C8 --target thumbv7m-none-eabi'
+or `cargo embed --example STM32F103C8 --target thumbv7m-none-eabi`

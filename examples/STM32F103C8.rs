@@ -15,6 +15,7 @@ const APP: () = {
     }
     #[init]
     fn init(cx: init::Context) -> init::LateResources {
+        rtt_target::rtt_init_print!();
         let cp = cx.core;
         let mut itm = cp.ITM;
 
@@ -26,6 +27,7 @@ const APP: () = {
     fn idle(cx: idle::Context) -> ! {
         let itm = cx.resources.itm;
         loop {
+            rtt_target::rprintln!("Hello, world!");
             iprintln!(&mut itm.stim[0], "idle");
             cortex_m::asm::delay(1000000);
         }
