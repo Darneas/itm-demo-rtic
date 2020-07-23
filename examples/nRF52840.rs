@@ -26,7 +26,7 @@ const APP: () = {
         let itm = cx.resources.itm;
         loop {
             iprintln!(&mut itm.stim[0], "idle");
-            cortex_m::asm::delay(1000000);
+            cortex_m::asm::delay(100000);
         }
     }
 };
